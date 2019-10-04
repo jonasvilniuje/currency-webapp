@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Title: jsf-primefaces-hello-world
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: Student
+Implementation-Vendor-Id: com.codenotfound
+Created-By: IntelliJ IDEA
+Build-Jdk: 1.8.0_221
+Main-Class: ${start-class}
+

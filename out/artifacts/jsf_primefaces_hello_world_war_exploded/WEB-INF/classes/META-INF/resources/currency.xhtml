@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+  <title>Valiutų kursai</title>
+</h:head>
+
+<h:body>
+  <h:form id="date-period">
+
+    <p:panel id="one" header="Rasti valiutų kursus pagal datą arba periodą">
+      <h:panelGrid columns="2" cellpadding="4" >
+        <h:outputText value="Data nuo: " />
+        <p:inputText id="dateFrom" value="#{currencyApp.dateFrom}" />
+
+        <h:outputText value="Data iki: " />
+        <p:inputText id="dateTo" value="#{currencyApp.dateTo}" />
+
+        <h:outputText value="Valiuta: " />
+        <p:inputText id="currency_for_date" value="#{currencyApp.ccy}" />
+
+        <p:commandButton id="result" value="pateikti"
+                         update="period-result-panel"
+                         oncomplete="PF('result').show()" />
+      </h:panelGrid>
+    </p:panel>
+
+    <p:dialog header="Result" widgetVar="result"
+              modal="true" resizable="true" scrollMode="native">
+      <h:panelGrid id="period-result-panel" columns="1" cellpadding="4" scrollable="true">
+        <h:outputText  value="#{currencyApp.get_rates_by_date_or_period()}" escape="false" />
+    </h:panelGrid>
+    </p:dialog>
+  </h:form>
+
+
+
+  <h:form id="currency">
+    <p:panel id="two" header="Rasti šiandienos valiutos kursą pagal valiutos pavadinimą">
+
+      <h:panelGrid columns="2" cellpadding="4">
+        <h:outputText value="Valiuta: " />
+        <p:inputText id="ccy" value="#{currencyApp.ccy}" />
+
+        <p:commandButton id="submit_by_ccy" value="pateikti"
+                         update="currency-result-panel"
+                         oncomplete="PF('ccy_result').show()" />
+      </h:panelGrid>
+    </p:panel>
+    <p:dialog header="Result" widgetVar="ccy_result"
+              modal="true" resizable="true" scrollMode="native">
+      <h:panelGrid id="currency-result-panel" columns="1" cellpadding="4" scrollable="true">
+        <h:outputText value="#{currencyApp.get_rates_by_currency()}" escape="false"  />
+      </h:panelGrid>
+    </p:dialog>
+
+  </h:form>
+
+</h:body>
+</html>
