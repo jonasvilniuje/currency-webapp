@@ -19,4 +19,4 @@ First form - get rates by date OR period
   3. Third field - currency - ex. USD - will return all currencies if not specified
   
 Second form - get rates by currency
-    1. First field - currency - ex. USD - will return all currencies if not specified
+  1. First field - currency - ex. USD - will return all currencies if not specified
