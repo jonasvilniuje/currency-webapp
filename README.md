@@ -1,4 +1,4 @@
-# my-app
+# Currency webapp
 **This is an example program for retrieving currency rates.**
 
 **Instructions for running the project:**
