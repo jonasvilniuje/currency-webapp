@@ -8,7 +8,8 @@ Instructions for running the project:
 Precautions of usage:
 1. The dates should be entered in YYYY-MM-DD format
 2. There CAN be empty fields left
-3. Only one currency at the time can be inputed
+3. Program accepts only one currency code at the time
+
 
 Instructions of usage:
 
