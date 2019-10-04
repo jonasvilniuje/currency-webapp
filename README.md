@@ -13,10 +13,10 @@
 
 **Instructions of usage:**
 
-First form - get rates by date OR period
+*First form - Get currency rates by date OR period*
   1. First field - date from - YYYY-MM-DD - will return rates of current date if not specified
   2. Second field - date to - YYYY-MM-DD - will return rates of date, not period if not specified
   3. Third field - currency - ex. USD - will return all currencies if not specified
   
-Second form - get rates by currency
+*Second form - Get current rates by currency code*
   1. First field - currency - ex. USD - will return all currencies if not specified
